@@ -5,7 +5,6 @@ export default new Pool({
   host: "localhost",
   port: 5432,
   password: "root",
-  user: "root", 
+  user: "root",
   keepAlive: true,
-
 })

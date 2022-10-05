@@ -9,7 +9,7 @@ const port = 3000;
 const productController = new ProductController();
 
 app.use(bodyParser.json())
-app.use(cors())
+app.options("*", cors({origin:true,credentials:true}))
 app.use(bodyParser.urlencoded({
   extended: true
 }))

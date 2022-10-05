@@ -1,7 +1,15 @@
 version: '3.8'
 
 services:  
-
+  web:
+    restart: true
+    build:
+      dockerfile: dockerfile
+    volumes:
+      - .:/usr/src/app
+    command: npm run start2
+    ports:
+      - "3000:3000"
   db:
     container_name: pg_container
     image: postgres
